@@ -203,7 +203,7 @@ func (c *conn) NewSubscriptionWithParams(p SubscriptionParams, cb func(Event)) (
 		params.ipAddressLength = C.uint32_t(len(p.IPAddress))
 	}
 	if p.Port != 0 {
-		params.portNumber = C.uint32_t(p.Port)
+		params.portNumber = C.uint32_t(50134)
 	}
 	if p.ClientInitiated {
 		params.clientInitiated = C.int(1)
