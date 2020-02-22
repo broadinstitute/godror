@@ -204,7 +204,7 @@ func (c *conn) NewSubscriptionWithParams(p SubscriptionParams, cb func(Event)) (
 	}
 	if p.Port != 0 {
 		params.portNumber = C.uint32_t(p.Port)
-		fmt.Println("PORT NUMBER mapping:", p.Port, params.portNumber)
+		log.Println("PORT NUMBER mapping:", p.Port, params.portNumber)
 	}
 	if p.ClientInitiated {
 		params.clientInitiated = C.int(1)
